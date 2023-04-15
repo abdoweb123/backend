@@ -1,0 +1,5501 @@
+---
+title: API Reference
+
+language_tabs:
+- bash
+- javascript
+
+includes:
+
+search: true
+
+toc_footers:
+- <a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a>
+---
+<!-- START_INFO -->
+# Info
+
+Welcome to the generated API reference.
+[Get Postman Collection](http://localhost/docs/collection.json)
+
+<!-- END_INFO -->
+
+#general
+
+
+<!-- START_6189102b1721c36e4e789408d20dd730 -->
+## Display all rows in the database for this entity.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/menu-item" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/menu-item`
+
+
+<!-- END_6189102b1721c36e4e789408d20dd730 -->
+
+<!-- START_5a705c824892c23142bb5dd96b7aea41 -->
+## The search function that is called by the data table.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/menu-item/search" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item/search"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/menu-item/search`
+
+
+<!-- END_5a705c824892c23142bb5dd96b7aea41 -->
+
+<!-- START_18d503d35f122979c935cd44a07ba58c -->
+## Used with AJAX in the list view (datatables) to show extra information about that row that didn&#039;t fit in the table.
+
+It defaults to showing some dummy text.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/menu-item/1/details" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item/1/details"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/menu-item/{id}/details`
+
+
+<!-- END_18d503d35f122979c935cd44a07ba58c -->
+
+<!-- START_bb1ecacebe471ede4bf6eca6d556624f -->
+## Show the form for creating inserting a new row.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/menu-item/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/menu-item/create`
+
+
+<!-- END_bb1ecacebe471ede4bf6eca6d556624f -->
+
+<!-- START_f1f37a0bddeb4304ed56f4c953ee3e9e -->
+## Store a newly created resource in the database.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/menu-item" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/menu-item`
+
+
+<!-- END_f1f37a0bddeb4304ed56f4c953ee3e9e -->
+
+<!-- START_e25a160909d648e9dc4df9bcae3a2eec -->
+## Show the form for editing the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/menu-item/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/menu-item/{id}/edit`
+
+
+<!-- END_e25a160909d648e9dc4df9bcae3a2eec -->
+
+<!-- START_0207ad0d92aca5ae794d7e7ba8f6633c -->
+## Update the specified resource in the database.
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "http://localhost/admin/menu-item/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT admin/menu-item/{id}`
+
+
+<!-- END_0207ad0d92aca5ae794d7e7ba8f6633c -->
+
+<!-- START_76a6585d09eff3ca620d5d5483beaa31 -->
+## Remove the specified resource from storage.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/admin/menu-item/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE admin/menu-item/{id}`
+
+
+<!-- END_76a6585d09eff3ca620d5d5483beaa31 -->
+
+<!-- START_33bac8be2e8e142340f6e2973c85f861 -->
+## Reorder the items in the database using the Nested Set pattern.
+
+Database columns needed: id, parent_id, lft, rgt, depth, name/title
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/menu-item/reorder" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item/reorder"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/menu-item/reorder`
+
+
+<!-- END_33bac8be2e8e142340f6e2973c85f861 -->
+
+<!-- START_24e5f85af416aa93e4204a0c0cae92ba -->
+## Save the new order, using the Nested Set pattern.
+
+Database columns needed: id, parent_id, lft, rgt, depth, name/title
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/menu-item/reorder" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/menu-item/reorder"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/menu-item/reorder`
+
+
+<!-- END_24e5f85af416aa93e4204a0c0cae92ba -->
+
+<!-- START_93811a85cfd4e2f94a2c67c5702204ea -->
+## Display all rows in the database for this entity.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/page" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/page"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/page`
+
+
+<!-- END_93811a85cfd4e2f94a2c67c5702204ea -->
+
+<!-- START_b862f8f29b3acafc048bd24258826928 -->
+## The search function that is called by the data table.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/page/search" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/page/search"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/page/search`
+
+
+<!-- END_b862f8f29b3acafc048bd24258826928 -->
+
+<!-- START_5494913d420bfafbbc1264c8d5987b3c -->
+## Used with AJAX in the list view (datatables) to show extra information about that row that didn&#039;t fit in the table.
+
+It defaults to showing some dummy text.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/page/1/details" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/page/1/details"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/page/{id}/details`
+
+
+<!-- END_5494913d420bfafbbc1264c8d5987b3c -->
+
+<!-- START_bee61fe3b20a5440b660a66a7757c4dd -->
+## Show the form for creating inserting a new row.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/page/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/page/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/page/create`
+
+
+<!-- END_bee61fe3b20a5440b660a66a7757c4dd -->
+
+<!-- START_c394f6e64ae8815750746e967049cc19 -->
+## Store a newly created resource in the database.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/page" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/page"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/page`
+
+
+<!-- END_c394f6e64ae8815750746e967049cc19 -->
+
+<!-- START_1699c2e7d9f53e95963872116ef0155c -->
+## Show the form for editing the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/page/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/page/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/page/{id}/edit`
+
+
+<!-- END_1699c2e7d9f53e95963872116ef0155c -->
+
+<!-- START_b1ba441d502db8fb05bf5bfa2dfdee41 -->
+## Update the specified resource in the database.
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "http://localhost/admin/page/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/page/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT admin/page/{id}`
+
+
+<!-- END_b1ba441d502db8fb05bf5bfa2dfdee41 -->
+
+<!-- START_691c1fde787c240632b4e8ad3cdcad42 -->
+## Create a duplicate of the current entry in the datatabase.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/page/1/clone" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/page/1/clone"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/page/{id}/clone`
+
+
+<!-- END_691c1fde787c240632b4e8ad3cdcad42 -->
+
+<!-- START_7f08dd93602613ad9fd0d524fdfc7995 -->
+## Remove the specified resource from storage.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/admin/page/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/page/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE admin/page/{id}`
+
+
+<!-- END_7f08dd93602613ad9fd0d524fdfc7995 -->
+
+<!-- START_03a76d7b7a89853a08696bfe71bbbba7 -->
+## Show the application&#039;s login form.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/login`
+
+
+<!-- END_03a76d7b7a89853a08696bfe71bbbba7 -->
+
+<!-- START_fe5fe3a14f04e5648848f1a59ea3da82 -->
+## Handle a login request to the application.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/login`
+
+
+<!-- END_fe5fe3a14f04e5648848f1a59ea3da82 -->
+
+<!-- START_b37225c1c4a9d4a9e253fecd543b79a0 -->
+## Log the user out of the application.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/logout" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/logout"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (302):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/logout`
+
+
+<!-- END_b37225c1c4a9d4a9e253fecd543b79a0 -->
+
+<!-- START_d31bd86158f6a5a775c92ea5b5554af9 -->
+## Log the user out of the application.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/logout" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/logout"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/logout`
+
+
+<!-- END_d31bd86158f6a5a775c92ea5b5554af9 -->
+
+<!-- START_2e5219bcb27fe97708e6f9907b7c9770 -->
+## Show the application registration form.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/register`
+
+
+<!-- END_2e5219bcb27fe97708e6f9907b7c9770 -->
+
+<!-- START_1832f7098e04604e04a2186b694f4df8 -->
+## Handle a registration request for the application.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/register`
+
+
+<!-- END_1832f7098e04604e04a2186b694f4df8 -->
+
+<!-- START_583a6990174e55a2eb91791ae4776c83 -->
+## Display the form to request a password reset link.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/password/reset" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/password/reset"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/password/reset`
+
+
+<!-- END_583a6990174e55a2eb91791ae4776c83 -->
+
+<!-- START_d155055b87508acb9e934bcf9407b028 -->
+## Reset the given user&#039;s password.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/password/reset" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/password/reset"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/password/reset`
+
+
+<!-- END_d155055b87508acb9e934bcf9407b028 -->
+
+<!-- START_968312b0cceac43f210857c19898f766 -->
+## Display the password reset view for the given token.
+
+If no token is present, display the link request form.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/password/reset/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/password/reset/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/password/reset/{token}`
+
+
+<!-- END_968312b0cceac43f210857c19898f766 -->
+
+<!-- START_f611ae8378c7426b163ac3d140ded37c -->
+## Send a reset link to the given user.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/password/email" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/password/email"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/password/email`
+
+
+<!-- END_f611ae8378c7426b163ac3d140ded37c -->
+
+<!-- START_8a59594ff635c00027a130968fc47527 -->
+## Show the admin dashboard.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/dashboard" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/dashboard"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/dashboard`
+
+
+<!-- END_8a59594ff635c00027a130968fc47527 -->
+
+<!-- START_e40bc60a458a9740730202aaec04f818 -->
+## Redirect to the dashboard.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin`
+
+
+<!-- END_e40bc60a458a9740730202aaec04f818 -->
+
+<!-- START_cfebc955e502ab82ac98b489aa8a44c8 -->
+## Show the user a form to change his personal information &amp; password.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/edit-account-info" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/edit-account-info"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/edit-account-info`
+
+
+<!-- END_cfebc955e502ab82ac98b489aa8a44c8 -->
+
+<!-- START_7d0dd830a363243fbc7058cc72b9c488 -->
+## Save the modified personal information for a user.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/edit-account-info" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/edit-account-info"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/edit-account-info`
+
+
+<!-- END_7d0dd830a363243fbc7058cc72b9c488 -->
+
+<!-- START_8f5705e828d3ae370595f1bd0ce2af17 -->
+## Save the new password for a user.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/change-password" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/change-password"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/change-password`
+
+
+<!-- END_8f5705e828d3ae370595f1bd0ce2af17 -->
+
+<!-- START_40fe2e5a17abf88b9949be837854e2c7 -->
+## Display all rows in the database for this entity.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/client" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/client"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/client`
+
+
+<!-- END_40fe2e5a17abf88b9949be837854e2c7 -->
+
+<!-- START_6aa27624d8ff027487fa57c80bece039 -->
+## The search function that is called by the data table.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/client/search" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/client/search"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/client/search`
+
+
+<!-- END_6aa27624d8ff027487fa57c80bece039 -->
+
+<!-- START_3e4f9679f22e1530b6953a532a75213a -->
+## Used with AJAX in the list view (datatables) to show extra information about that row that didn&#039;t fit in the table.
+
+It defaults to showing some dummy text.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/client/1/details" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/client/1/details"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/client/{id}/details`
+
+
+<!-- END_3e4f9679f22e1530b6953a532a75213a -->
+
+<!-- START_a752466aaaa90258a7ab2f1db1b02ea7 -->
+## Show the form for creating inserting a new row.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/client/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/client/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/client/create`
+
+
+<!-- END_a752466aaaa90258a7ab2f1db1b02ea7 -->
+
+<!-- START_33ba14b725acccf9ad06d68f292dc19e -->
+## Store a newly created resource in the database.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/client" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/client"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/client`
+
+
+<!-- END_33ba14b725acccf9ad06d68f292dc19e -->
+
+<!-- START_6478baef1c39a09c9a123390f884f2b5 -->
+## Show the form for editing the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/client/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/client/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/client/{id}/edit`
+
+
+<!-- END_6478baef1c39a09c9a123390f884f2b5 -->
+
+<!-- START_53c6ed3fb408a0048a038ccb5833bc91 -->
+## Update the specified resource in the database.
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "http://localhost/admin/client/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/client/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT admin/client/{id}`
+
+
+<!-- END_53c6ed3fb408a0048a038ccb5833bc91 -->
+
+<!-- START_d6088560c669e42e45cad99f34172653 -->
+## Remove the specified resource from storage.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/admin/client/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/client/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE admin/client/{id}`
+
+
+<!-- END_d6088560c669e42e45cad99f34172653 -->
+
+<!-- START_9cf97ff3b6594b2e55624a53389cdd0f -->
+## Display the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/client/1/show" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/client/1/show"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/client/{id}/show`
+
+
+<!-- END_9cf97ff3b6594b2e55624a53389cdd0f -->
+
+<!-- START_9fea2738131cafa64a77f38f4f18fdd5 -->
+## Display all rows in the database for this entity.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/driver" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/driver"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/driver`
+
+
+<!-- END_9fea2738131cafa64a77f38f4f18fdd5 -->
+
+<!-- START_4d19d48b3a67dcd0b3b4c11eb1bb9261 -->
+## The search function that is called by the data table.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/driver/search" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/driver/search"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/driver/search`
+
+
+<!-- END_4d19d48b3a67dcd0b3b4c11eb1bb9261 -->
+
+<!-- START_3a1ab43dd6073f356574cb09815f9fd4 -->
+## Used with AJAX in the list view (datatables) to show extra information about that row that didn&#039;t fit in the table.
+
+It defaults to showing some dummy text.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/driver/1/details" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/driver/1/details"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/driver/{id}/details`
+
+
+<!-- END_3a1ab43dd6073f356574cb09815f9fd4 -->
+
+<!-- START_fe76649a903279f884ef56aa539499f3 -->
+## Show the form for creating inserting a new row.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/driver/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/driver/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/driver/create`
+
+
+<!-- END_fe76649a903279f884ef56aa539499f3 -->
+
+<!-- START_c55cbb977cc171ef3ec867ffc60e2ca6 -->
+## Store a newly created resource in the database.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/driver" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/driver"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/driver`
+
+
+<!-- END_c55cbb977cc171ef3ec867ffc60e2ca6 -->
+
+<!-- START_1622ad3ba9e93a5f0bde9f62f5238210 -->
+## Show the form for editing the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/driver/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/driver/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/driver/{id}/edit`
+
+
+<!-- END_1622ad3ba9e93a5f0bde9f62f5238210 -->
+
+<!-- START_63843b0ff18dca82c1c240bc6edc4890 -->
+## Update the specified resource in the database.
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "http://localhost/admin/driver/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/driver/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT admin/driver/{id}`
+
+
+<!-- END_63843b0ff18dca82c1c240bc6edc4890 -->
+
+<!-- START_4a49743333cfb9bbb568892dc787e3b3 -->
+## Remove the specified resource from storage.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/admin/driver/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/driver/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE admin/driver/{id}`
+
+
+<!-- END_4a49743333cfb9bbb568892dc787e3b3 -->
+
+<!-- START_21b717f2871b33aa793a57a8fa2dd359 -->
+## Display the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/driver/1/show" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/driver/1/show"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/driver/{id}/show`
+
+
+<!-- END_21b717f2871b33aa793a57a8fa2dd359 -->
+
+<!-- START_ccb82b0448699677a91e066c1d9aff08 -->
+## Display all rows in the database for this entity.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/maincategorys" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/maincategorys"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/maincategorys`
+
+
+<!-- END_ccb82b0448699677a91e066c1d9aff08 -->
+
+<!-- START_06dce762cf5b7cf16377b704464087b2 -->
+## The search function that is called by the data table.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/maincategorys/search" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/maincategorys/search"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/maincategorys/search`
+
+
+<!-- END_06dce762cf5b7cf16377b704464087b2 -->
+
+<!-- START_b4e22eaf8cf24350868ffbd15920682d -->
+## Used with AJAX in the list view (datatables) to show extra information about that row that didn&#039;t fit in the table.
+
+It defaults to showing some dummy text.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/maincategorys/1/details" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/maincategorys/1/details"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/maincategorys/{id}/details`
+
+
+<!-- END_b4e22eaf8cf24350868ffbd15920682d -->
+
+<!-- START_f1115a3a8fd1d49c4477bb01b0db8c93 -->
+## Show the form for creating inserting a new row.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/maincategorys/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/maincategorys/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/maincategorys/create`
+
+
+<!-- END_f1115a3a8fd1d49c4477bb01b0db8c93 -->
+
+<!-- START_f6cfefaaf132ff9fb53202decdc74c18 -->
+## Store a newly created resource in the database.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/admin/maincategorys" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/maincategorys"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST admin/maincategorys`
+
+
+<!-- END_f6cfefaaf132ff9fb53202decdc74c18 -->
+
+<!-- START_2bd278d5757efced11ec1779e38bd09a -->
+## Show the form for editing the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/maincategorys/1/edit" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/maincategorys/1/edit"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/maincategorys/{id}/edit`
+
+
+<!-- END_2bd278d5757efced11ec1779e38bd09a -->
+
+<!-- START_322477a4a6c006abb22efcaf715565c4 -->
+## Update the specified resource in the database.
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "http://localhost/admin/maincategorys/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/maincategorys/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT admin/maincategorys/{id}`
+
+
+<!-- END_322477a4a6c006abb22efcaf715565c4 -->
+
+<!-- START_c2d7c1abb4ca2dfd37ac5194401a525c -->
+## Remove the specified resource from storage.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/admin/maincategorys/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/maincategorys/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE admin/maincategorys/{id}`
+
+
+<!-- END_c2d7c1abb4ca2dfd37ac5194401a525c -->
+
+<!-- START_385fd5e6326479c212d02e79b3739f68 -->
+## Display the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/admin/maincategorys/1/show" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/admin/maincategorys/1/show"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+null
+```
+
+### HTTP Request
+`GET admin/maincategorys/{id}/show`
+
+
+<!-- END_385fd5e6326479c212d02e79b3739f68 -->
+
+<!-- START_0c068b4037fb2e47e71bd44bd36e3e2a -->
+## Authorize a client to access the user&#039;s account.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/oauth/authorize" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/authorize"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET oauth/authorize`
+
+
+<!-- END_0c068b4037fb2e47e71bd44bd36e3e2a -->
+
+<!-- START_e48cc6a0b45dd21b7076ab2c03908687 -->
+## Approve the authorization request.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/oauth/authorize" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/authorize"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST oauth/authorize`
+
+
+<!-- END_e48cc6a0b45dd21b7076ab2c03908687 -->
+
+<!-- START_de5d7581ef1275fce2a229b6b6eaad9c -->
+## Deny the authorization request.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/oauth/authorize" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/authorize"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE oauth/authorize`
+
+
+<!-- END_de5d7581ef1275fce2a229b6b6eaad9c -->
+
+<!-- START_a09d20357336aa979ecd8e3972ac9168 -->
+## Authorize a client to access the user&#039;s account.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/oauth/token" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/token"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST oauth/token`
+
+
+<!-- END_a09d20357336aa979ecd8e3972ac9168 -->
+
+<!-- START_d6a56149547e03307199e39e03e12d1c -->
+## Get all of the authorized tokens for the authenticated user.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/oauth/tokens" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/tokens"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET oauth/tokens`
+
+
+<!-- END_d6a56149547e03307199e39e03e12d1c -->
+
+<!-- START_a9a802c25737cca5324125e5f60b72a5 -->
+## Delete the given token.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/oauth/tokens/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/tokens/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE oauth/tokens/{token_id}`
+
+
+<!-- END_a9a802c25737cca5324125e5f60b72a5 -->
+
+<!-- START_abe905e69f5d002aa7d26f433676d623 -->
+## Get a fresh transient token cookie for the authenticated user.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/oauth/token/refresh" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/token/refresh"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST oauth/token/refresh`
+
+
+<!-- END_abe905e69f5d002aa7d26f433676d623 -->
+
+<!-- START_babcfe12d87b8708f5985e9d39ba8f2c -->
+## Get all of the clients for the authenticated user.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/oauth/clients" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/clients"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET oauth/clients`
+
+
+<!-- END_babcfe12d87b8708f5985e9d39ba8f2c -->
+
+<!-- START_9eabf8d6e4ab449c24c503fcb42fba82 -->
+## Store a new client.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/oauth/clients" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/clients"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST oauth/clients`
+
+
+<!-- END_9eabf8d6e4ab449c24c503fcb42fba82 -->
+
+<!-- START_784aec390a455073fc7464335c1defa1 -->
+## Update the given client.
+
+> Example request:
+
+```bash
+curl -X PUT \
+    "http://localhost/oauth/clients/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/clients/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT oauth/clients/{client_id}`
+
+
+<!-- END_784aec390a455073fc7464335c1defa1 -->
+
+<!-- START_1f65a511dd86ba0541d7ba13ca57e364 -->
+## Delete the given client.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/oauth/clients/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/clients/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE oauth/clients/{client_id}`
+
+
+<!-- END_1f65a511dd86ba0541d7ba13ca57e364 -->
+
+<!-- START_9e281bd3a1eb1d9eb63190c8effb607c -->
+## Get all of the available scopes for the application.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/oauth/scopes" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/scopes"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET oauth/scopes`
+
+
+<!-- END_9e281bd3a1eb1d9eb63190c8effb607c -->
+
+<!-- START_9b2a7699ce6214a79e0fd8107f8b1c9e -->
+## Get all of the personal access tokens for the authenticated user.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/oauth/personal-access-tokens" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/personal-access-tokens"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET oauth/personal-access-tokens`
+
+
+<!-- END_9b2a7699ce6214a79e0fd8107f8b1c9e -->
+
+<!-- START_a8dd9c0a5583742e671711f9bb3ee406 -->
+## Create a new personal access token for the user.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/oauth/personal-access-tokens" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/personal-access-tokens"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST oauth/personal-access-tokens`
+
+
+<!-- END_a8dd9c0a5583742e671711f9bb3ee406 -->
+
+<!-- START_bae65df80fd9d72a01439241a9ea20d0 -->
+## Delete the given token.
+
+> Example request:
+
+```bash
+curl -X DELETE \
+    "http://localhost/oauth/personal-access-tokens/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/oauth/personal-access-tokens/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE oauth/personal-access-tokens/{token_id}`
+
+
+<!-- END_bae65df80fd9d72a01439241a9ea20d0 -->
+
+<!-- START_bdcf380bbb182a2751224826668a15f6 -->
+## api/Auth/register
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Auth/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Auth/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Auth/register`
+
+
+<!-- END_bdcf380bbb182a2751224826668a15f6 -->
+
+<!-- START_7bd992bbc1a03b34d5e1309cf3da042e -->
+## api/Auth/login
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Auth/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Auth/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Auth/login`
+
+
+<!-- END_7bd992bbc1a03b34d5e1309cf3da042e -->
+
+<!-- START_916cabd739a1d69b7b2e3937162858e8 -->
+## api/Main/AllCategories
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Main/AllCategories" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Main/AllCategories"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Main/AllCategories`
+
+
+<!-- END_916cabd739a1d69b7b2e3937162858e8 -->
+
+<!-- START_9c86ef90c867788a7ad6696e171e30d2 -->
+## api/Main/CategoryById/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Main/CategoryById/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Main/CategoryById/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Main/CategoryById/{id}`
+
+
+<!-- END_9c86ef90c867788a7ad6696e171e30d2 -->
+
+<!-- START_abdad3cba62f98a254dd463c9d9bb7a3 -->
+## api/Main/RlaceByCategory/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Main/RlaceByCategory/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Main/RlaceByCategory/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Main/RlaceByCategory/{id}`
+
+
+<!-- END_abdad3cba62f98a254dd463c9d9bb7a3 -->
+
+<!-- START_8f044a4266ab7c8245790167ea5f8b18 -->
+## api/Main/RlaceById/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Main/RlaceById/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Main/RlaceById/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Main/RlaceById/{id}`
+
+
+<!-- END_8f044a4266ab7c8245790167ea5f8b18 -->
+
+<!-- START_4c81ebbdde1924f706b302294d83080d -->
+## api/Main/MenuItems/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Main/MenuItems/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Main/MenuItems/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Main/MenuItems/{id}`
+
+
+<!-- END_4c81ebbdde1924f706b302294d83080d -->
+
+<!-- START_a5ce6921af1f9afe5b191122e5128ac1 -->
+## api/Main/nearByMarkets
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Main/nearByMarkets" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Main/nearByMarkets"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Main/nearByMarkets`
+
+
+<!-- END_a5ce6921af1f9afe5b191122e5128ac1 -->
+
+<!-- START_3a438281954842026126307fcb2325c4 -->
+## api/Main/MarketsFilter
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Main/MarketsFilter" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Main/MarketsFilter"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Main/MarketsFilter`
+
+
+<!-- END_3a438281954842026126307fcb2325c4 -->
+
+<!-- START_8cbe890d5a94bb9ed4b3543ffc3410d2 -->
+## api/Main/AllMarkets
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Main/AllMarkets" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Main/AllMarkets"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Main/AllMarkets`
+
+
+<!-- END_8cbe890d5a94bb9ed4b3543ffc3410d2 -->
+
+<!-- START_86533dc56b0c8f53f07ebe825ad5849f -->
+## api/Main/markettypes
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Main/markettypes" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Main/markettypes"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Main/markettypes`
+
+
+<!-- END_86533dc56b0c8f53f07ebe825ad5849f -->
+
+<!-- START_a41d20ee063c86c91f0837d43dfca02f -->
+## api/User/user-by-id
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/User/user-by-id" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/User/user-by-id"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/User/user-by-id`
+
+
+<!-- END_a41d20ee063c86c91f0837d43dfca02f -->
+
+<!-- START_8c2e52b19e6063d325503ed9b137c796 -->
+## api/Me/MyProfile
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Me/MyProfile" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Me/MyProfile"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Me/MyProfile`
+
+
+<!-- END_8c2e52b19e6063d325503ed9b137c796 -->
+
+<!-- START_880e4e26f41e3f3404c8151653c4ca2e -->
+## api/Me/MyNotifiy
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Me/MyNotifiy" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Me/MyNotifiy"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Me/MyNotifiy`
+
+
+<!-- END_880e4e26f41e3f3404c8151653c4ca2e -->
+
+<!-- START_14465268a9530a0b9924378862f2ab2b -->
+## api/Car/GetCars
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Car/GetCars" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Car/GetCars"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Car/GetCars`
+
+
+<!-- END_14465268a9530a0b9924378862f2ab2b -->
+
+<!-- START_02b28460f5c531b2c82e670fc252445a -->
+## api/SpecialCars/SpecialCarTypes
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/SpecialCars/SpecialCarTypes" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/SpecialCars/SpecialCarTypes"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/SpecialCars/SpecialCarTypes`
+
+
+<!-- END_02b28460f5c531b2c82e670fc252445a -->
+
+<!-- START_295332c1aaaf010ae36c28bd5ac4a848 -->
+## api/SpecialCars/GetSpecialCar
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/SpecialCars/GetSpecialCar" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/SpecialCars/GetSpecialCar"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/SpecialCars/GetSpecialCar`
+
+
+<!-- END_295332c1aaaf010ae36c28bd5ac4a848 -->
+
+<!-- START_91e36e5bccd75e67e63534268c93fe74 -->
+## api/Truck/GetFurnitureCar
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Truck/GetFurnitureCar" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Truck/GetFurnitureCar"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Truck/GetFurnitureCar`
+
+
+<!-- END_91e36e5bccd75e67e63534268c93fe74 -->
+
+<!-- START_bb537d1b2524eeaf86349ce38dd05765 -->
+## api/Restaurant/RestaurantCategory
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Restaurant/RestaurantCategory" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurant/RestaurantCategory"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Restaurant/RestaurantCategory`
+
+
+<!-- END_bb537d1b2524eeaf86349ce38dd05765 -->
+
+<!-- START_763af405f0037a7fb752ad84f8002fde -->
+## api/Restaurant/RestaurantByCategory/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Restaurant/RestaurantByCategory/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurant/RestaurantByCategory/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Restaurant/RestaurantByCategory/{id}`
+
+
+<!-- END_763af405f0037a7fb752ad84f8002fde -->
+
+<!-- START_9f9623cab65757e403fcad4b8d4cc120 -->
+## api/Restaurant/RestaurantByid/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Restaurant/RestaurantByid/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurant/RestaurantByid/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Restaurant/RestaurantByid/{id}`
+
+
+<!-- END_9f9623cab65757e403fcad4b8d4cc120 -->
+
+<!-- START_e787e0816c94633744f5a815508d91bc -->
+## api/Restaurant/MenuItems/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Restaurant/MenuItems/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurant/MenuItems/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Restaurant/MenuItems/{id}`
+
+
+<!-- END_e787e0816c94633744f5a815508d91bc -->
+
+<!-- START_693481a0ae2a9c0c59d4f54912e2ea78 -->
+## api/Cafe/CageCategory
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Cafe/CageCategory" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Cafe/CageCategory"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Cafe/CageCategory`
+
+
+<!-- END_693481a0ae2a9c0c59d4f54912e2ea78 -->
+
+<!-- START_9e41db4ceb68299f9ae4964b808490f4 -->
+## api/Cafe/CafeByCategory/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Cafe/CafeByCategory/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Cafe/CafeByCategory/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Cafe/CafeByCategory/{id}`
+
+
+<!-- END_9e41db4ceb68299f9ae4964b808490f4 -->
+
+<!-- START_eececd16d1fc37bbd2faadd8e21a5828 -->
+## api/Cafe/CafeByid/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Cafe/CafeByid/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Cafe/CafeByid/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Cafe/CafeByid/{id}`
+
+
+<!-- END_eececd16d1fc37bbd2faadd8e21a5828 -->
+
+<!-- START_7e9e6119e8e91fd66922c1b5d12eb81e -->
+## api/Cafe/MenuItems/{id}
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Cafe/MenuItems/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Cafe/MenuItems/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Cafe/MenuItems/{id}`
+
+
+<!-- END_7e9e6119e8e91fd66922c1b5d12eb81e -->
+
+<!-- START_bd9207d905fba223d17ed45b3fbedd34 -->
+## api/Driver/near-by
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Driver/near-by" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Driver/near-by"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Driver/near-by`
+
+
+<!-- END_bd9207d905fba223d17ed45b3fbedd34 -->
+
+<!-- START_4ab18dcb2356b013be6912059eafb73f -->
+## api/Order/store
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Order/store" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Order/store"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Order/store`
+
+
+<!-- END_4ab18dcb2356b013be6912059eafb73f -->
+
+<!-- START_63ad97c7ba70963cdb33214f001fe082 -->
+## api/Order/MyOrders
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Order/MyOrders" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Order/MyOrders"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Order/MyOrders`
+
+
+<!-- END_63ad97c7ba70963cdb33214f001fe082 -->
+
+<!-- START_58d1ac1f350af8df82d566787a973c4a -->
+## api/Trip/MyTripsForClient
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Trip/MyTripsForClient" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Trip/MyTripsForClient"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Trip/MyTripsForClient`
+
+
+<!-- END_58d1ac1f350af8df82d566787a973c4a -->
+
+<!-- START_fde4a2bd9b1c61abbb4e8e7d858c6921 -->
+## api/Trip/MyTripsForDriver
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Trip/MyTripsForDriver" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Trip/MyTripsForDriver"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Trip/MyTripsForDriver`
+
+
+<!-- END_fde4a2bd9b1c61abbb4e8e7d858c6921 -->
+
+<!-- START_ce19499e6de1f40aea3e1d6ac70940ed -->
+## api/Trip/GetTaxi
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Trip/GetTaxi" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Trip/GetTaxi"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Trip/GetTaxi`
+
+
+<!-- END_ce19499e6de1f40aea3e1d6ac70940ed -->
+
+<!-- START_9b56a9efa599d5164acd548f4790f44f -->
+## api/Trip/ConfirmRide
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Trip/ConfirmRide" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Trip/ConfirmRide"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Trip/ConfirmRide`
+
+
+<!-- END_9b56a9efa599d5164acd548f4790f44f -->
+
+<!-- START_de74935d9be34304c941877d0cd0d2a7 -->
+## api/Trip/GetDistance
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Trip/GetDistance" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Trip/GetDistance"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Trip/GetDistance`
+
+
+<!-- END_de74935d9be34304c941877d0cd0d2a7 -->
+
+<!-- START_29d72661add1e1be8f61b4c15be1fb7d -->
+## api/Trip/StartRide
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Trip/StartRide" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Trip/StartRide"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Trip/StartRide`
+
+
+<!-- END_29d72661add1e1be8f61b4c15be1fb7d -->
+
+<!-- START_30082971f2b386cb2c74a3e22cf9a105 -->
+## api/Trip/CancelRide
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Trip/CancelRide" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Trip/CancelRide"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Trip/CancelRide`
+
+
+<!-- END_30082971f2b386cb2c74a3e22cf9a105 -->
+
+<!-- START_50afeda314fe57d3e737a559c558f6b4 -->
+## api/Trip/EndRide
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/api/Trip/EndRide" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Trip/EndRide"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET api/Trip/EndRide`
+
+
+<!-- END_50afeda314fe57d3e737a559c558f6b4 -->
+
+<!-- START_e74dd1f86f95ab2c4a4ae83669cdeb0b -->
+## api/Trip/RidePrice
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Trip/RidePrice" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Trip/RidePrice"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Trip/RidePrice`
+
+
+<!-- END_e74dd1f86f95ab2c4a4ae83669cdeb0b -->
+
+<!-- START_5feeaedf410517ffedc8d7264fd0212e -->
+## api/Restaurants/AddResturant
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Restaurants/AddResturant" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurants/AddResturant"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Restaurants/AddResturant`
+
+
+<!-- END_5feeaedf410517ffedc8d7264fd0212e -->
+
+<!-- START_2aefbaa0e727c7dc921cde07eae344b5 -->
+## api/Restaurants/AddResturantMenu
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Restaurants/AddResturantMenu" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurants/AddResturantMenu"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Restaurants/AddResturantMenu`
+
+
+<!-- END_2aefbaa0e727c7dc921cde07eae344b5 -->
+
+<!-- START_3b17485d67a699dbcbf8b03231e1359e -->
+## api/Restaurants/RestaurantCategorys
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Restaurants/RestaurantCategorys" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurants/RestaurantCategorys"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Restaurants/RestaurantCategorys`
+
+
+<!-- END_3b17485d67a699dbcbf8b03231e1359e -->
+
+<!-- START_55afda6cc7bf06f13bc0ae158c7d740c -->
+## api/Restaurants/MenuCategorys
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Restaurants/MenuCategorys" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurants/MenuCategorys"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Restaurants/MenuCategorys`
+
+
+<!-- END_55afda6cc7bf06f13bc0ae158c7d740c -->
+
+<!-- START_e91fa150ae03a4c14843ff9e7624198b -->
+## api/Restaurants/addCategory
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Restaurants/addCategory" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurants/addCategory"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Restaurants/addCategory`
+
+
+<!-- END_e91fa150ae03a4c14843ff9e7624198b -->
+
+<!-- START_58c6ea8378adb7e762da6b4ab124d08f -->
+## api/Restaurants/AddCafe
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Restaurants/AddCafe" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurants/AddCafe"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Restaurants/AddCafe`
+
+
+<!-- END_58c6ea8378adb7e762da6b4ab124d08f -->
+
+<!-- START_c8fc6d77543f7b30f4ca02ea56bb7a39 -->
+## api/Restaurants/AddCafeMenu
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Restaurants/AddCafeMenu" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurants/AddCafeMenu"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Restaurants/AddCafeMenu`
+
+
+<!-- END_c8fc6d77543f7b30f4ca02ea56bb7a39 -->
+
+<!-- START_4aed23e07403afa9f8115a81ac274286 -->
+## api/Restaurants/addCafeCategory
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/api/Restaurants/addCafeCategory" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/api/Restaurants/addCafeCategory"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/Restaurants/addCafeCategory`
+
+
+<!-- END_4aed23e07403afa9f8115a81ac274286 -->
+
+<!-- START_66e08d3cc8222573018fed49e121e96d -->
+## Show the application&#039;s login form.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+null
+```
+
+### HTTP Request
+`GET login`
+
+
+<!-- END_66e08d3cc8222573018fed49e121e96d -->
+
+<!-- START_ba35aa39474cb98cfb31829e70eb8b74 -->
+## Handle a login request to the application.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/login" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/login"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST login`
+
+
+<!-- END_ba35aa39474cb98cfb31829e70eb8b74 -->
+
+<!-- START_e65925f23b9bc6b93d9356895f29f80c -->
+## Log the user out of the application.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/logout" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/logout"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST logout`
+
+
+<!-- END_e65925f23b9bc6b93d9356895f29f80c -->
+
+<!-- START_ff38dfb1bd1bb7e1aa24b4e1792a9768 -->
+## Show the application registration form.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+null
+```
+
+### HTTP Request
+`GET register`
+
+
+<!-- END_ff38dfb1bd1bb7e1aa24b4e1792a9768 -->
+
+<!-- START_d7aad7b5ac127700500280d511a3db01 -->
+## Handle a registration request for the application.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/register" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/register"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST register`
+
+
+<!-- END_d7aad7b5ac127700500280d511a3db01 -->
+
+<!-- START_d72797bae6d0b1f3a341ebb1f8900441 -->
+## Display the form to request a password reset link.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/password/reset" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/password/reset"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+null
+```
+
+### HTTP Request
+`GET password/reset`
+
+
+<!-- END_d72797bae6d0b1f3a341ebb1f8900441 -->
+
+<!-- START_feb40f06a93c80d742181b6ffb6b734e -->
+## Send a reset link to the given user.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/password/email" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/password/email"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST password/email`
+
+
+<!-- END_feb40f06a93c80d742181b6ffb6b734e -->
+
+<!-- START_e1605a6e5ceee9d1aeb7729216635fd7 -->
+## Display the password reset view for the given token.
+
+If no token is present, display the link request form.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/password/reset/1" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/password/reset/1"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+null
+```
+
+### HTTP Request
+`GET password/reset/{token}`
+
+
+<!-- END_e1605a6e5ceee9d1aeb7729216635fd7 -->
+
+<!-- START_cafb407b7a846b31491f97719bb15aef -->
+## Reset the given user&#039;s password.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/password/reset" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/password/reset"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST password/reset`
+
+
+<!-- END_cafb407b7a846b31491f97719bb15aef -->
+
+<!-- START_b77aedc454e9471a35dcb175278ec997 -->
+## Display the password confirmation view.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/password/confirm" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/password/confirm"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET password/confirm`
+
+
+<!-- END_b77aedc454e9471a35dcb175278ec997 -->
+
+<!-- START_54462d3613f2262e741142161c0e6fea -->
+## Confirm the given user&#039;s password.
+
+> Example request:
+
+```bash
+curl -X POST \
+    "http://localhost/password/confirm" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/password/confirm"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST password/confirm`
+
+
+<!-- END_54462d3613f2262e741142161c0e6fea -->
+
+<!-- START_cb859c8e84c35d7133b6a6c8eac253f8 -->
+## Show the application dashboard.
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/home" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/home"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (401):
+
+```json
+{
+    "message": "Unauthenticated."
+}
+```
+
+### HTTP Request
+`GET home`
+
+
+<!-- END_cb859c8e84c35d7133b6a6c8eac253f8 -->
+
+
